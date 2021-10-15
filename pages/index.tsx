@@ -21,13 +21,17 @@ for(var i in data){
   <dl className={utilStyles.headlineItem}>
     <dt>{data[i].title}</dt>
     <dd>
-      <Image
-        priority
-        quality={1}
-        src={data[i].url}
-        width={data[i].width}
-        height={data[i].height}
-      ></Image>
+      <Link
+        href="/"
+      >        
+        <Image
+          priority
+          quality={1}
+          src={data[i].url}
+          width={data[i].width}
+          height={data[i].height}
+        ></Image>
+      </Link>
     </dd>
   </dl>
   );
