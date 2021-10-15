@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
 const name = '[Your Name]'
@@ -28,6 +27,21 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
+            <div className={styles.topBar}>
+              <div>a</div>
+              <div className={styles.siteName}>header</div>
+              <div>n</div>
+            </div>
+            <div className={styles.topNav}>
+              <nav>
+                <ul>
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/">AAA</Link></li>
+                  <li><Link href="/">BBB</Link></li>
+                  <li><Link href="/">CCC</Link></li>
+                </ul>
+              </nav>
+            </div>
           </>
         ) : (
           <>

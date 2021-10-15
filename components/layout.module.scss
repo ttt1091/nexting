@@ -1,3 +1,7 @@
+$site-header-color: #51A8DD;
+$site-header-font-color: #FFFFFF;
+$color-gunjyo: #51A8DD;
+
 .container {
   width: 100%;
 }
@@ -6,8 +10,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $site-header-color;
+  color: $site-header-font-color;
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+
+.topBar{
+  padding: 4px 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .siteName{
+    font-size: 1.4rem;
+  }
+}
+.topNav{
+  width: 100%;
+  background-color: inherit;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: inherit;
+    li{
+      padding: 2px 4px;
+      a{
+        display: block;
+        padding: 2px 4px;
+        text-decoration: none;
+        color: $site-header-font-color;
+      }
+    }
+  }
 }

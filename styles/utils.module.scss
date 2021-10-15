@@ -1,3 +1,49 @@
+.headline{
+  width: 100%;
+  overflow: hidden;
+  .headlineItems{
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: no-wrap;
+    width: auto;
+    .headlineItem{
+      position: relative;
+      margin: 8px 8px 8px 0;
+      &:first-child{
+        margin-left: 8px;
+      }
+    }
+    dt{
+      position: absolute;
+      bottom: 0;
+      z-index: 999;
+      background-color: rgba(200, 200, 200, 0.7);
+      width: 100%;
+    }
+    dd{
+      position: absolute;
+      margin: 0;
+    }
+    .headlineItem{
+      height: 150px;
+      flex: 0 0 200px;
+      img{
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        object-position: 50% 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
