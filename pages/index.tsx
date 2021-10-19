@@ -5,12 +5,6 @@ import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-import dynamic from 'next/dynamic';
-import '@brainhubeu/react-carousel/lib/style.css';
-
-const Carousel = dynamic(() => import('@brainhubeu/react-carousel'), {
-  ssr: false,
-});
 
 var headline = [];
 
@@ -54,18 +48,10 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.headlineItems}>
           {headline}
         </div>
-        <div>
-          <Carousel plugins={['arrows']}>
-            <img src="/images/dummy-002.jpg" />
-            <img src="/images/dummy-003.jpg" />
-            <img src="/images/dummy-004.jpg" />
-            <img src="/images/dummy-005.jpg" />
-          </Carousel>
-        </div>
       </section>
       <section className={utilStyles.headingMd}>
       </section>
-      <section className={`${utilStyles.headingMd}`}>
+      <section className={utilStyles.headingMd}>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
